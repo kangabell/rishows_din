@@ -132,6 +132,13 @@ function rishows_din_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'rishows_din_scripts' );
 
+// use Events post type in User Submitted Post plugin
+function usp_modify_post_type($post_type) {
+	return 'tribe_events';
+}
+add_filter('usp_post_type', 'usp_modify_post_type');
+
+
 /**
  * Implement the Custom Header feature.
  */
