@@ -27,6 +27,13 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
+			$rishows_din_description = get_bloginfo( 'description', 'display' );
+			if ( $rishows_din_description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo $rishows_din_description; /* WPCS: xss ok. */ ?></p>
+			<?php
+			endif;
+
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
@@ -37,11 +44,7 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$rishows_din_description = get_bloginfo( 'description', 'display' );
-			if ( $rishows_din_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $rishows_din_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

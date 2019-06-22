@@ -104,3 +104,65 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+html {
+	font-size: 18px;
+}
+
+body {
+	background: url('img/lightpaperfibers.png');
+	background-size: 250px 150px;
+	padding: 0.5rem;
+}
+
+.site-description {
+	color: $color__text-alt;
+	font-family: $font__alt;
+	font-weight: 600;
+	margin-bottom: 0;
+	@media screen and (min-width: 37.5em) {
+		font-size: 1.25rem;
+	}
+}
+
+.site-title {
+	font-size: 3.375rem;
+	letter-spacing: 0.075em;
+	line-height: 1;
+	margin: 0 0 0.5em;
+	a {
+		border: 0;
+		color: $color__text-main;
+	}
+	@media screen and (min-width: 37.5em) {
+		font-size: 7.594rem;
+	}
+}
+
+.tribe-events-list-separator-month {
+	display: none;
+}
+
+.event-meta {
+	margin-right: 0.5em;
+}
+
+.event-title {
+	font-size: 1rem;
+	line-height: 1.125;
+	margin: 0;
+	@media screen and (min-width: 37.5em) {
+		font-size: 1.25rem;
+		display: inline;
+		margin-right: 0.25em;
+	}
+}
+
+.event-url a {
+	border: 0;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__text-main;
+	}
+}

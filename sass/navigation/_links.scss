@@ -1,5 +1,10 @@
 a {
+	border-bottom: 2px solid transparent;
 	color: $color__link;
+	font-weight: bold;
+	letter-spacing: 0.075em;
+	text-decoration: none;
+	text-transform: uppercase;
 
 	&:visited {
 		color: $color__link-visited;
@@ -7,6 +12,7 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
+		border-color: $color__text-main;
 		color: $color__link-hover;
 	}
 	&:focus {
