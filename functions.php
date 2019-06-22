@@ -138,6 +138,19 @@ function usp_modify_post_type($post_type) {
 }
 add_filter('usp_post_type', 'usp_modify_post_type');
 
+// Remove Tribe Events Bar
+add_filter( 'tribe-events-bar-should-show', '__return_false', 9999 );
+
+// Changes the text for calendar export button
+remove_action( 'tribe_events_after_footer', array( tribe( 'tec.iCal' ), 'maybe_add_link' ) );
+add_action( 'tribe_events_after_footer', 'customized_tribe_single_event_links' );
+
+function customized_tribe_single_event_links()	{
+	if ( is_single() && post_password_required() ) {
+		return;
+	}
+	echo '<a class="tribe-events-ical tribe-events-button" title="Use this to share calendar data with Google Calendar, Apple iCal and other compatible apps" href="' . tribe_get_ical_link() . '">+ Export</a>';
+}
 
 /**
  * Implement the Custom Header feature.
