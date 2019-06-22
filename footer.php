@@ -15,17 +15,18 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'rishows-din' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'rishows-din' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'rishows-din' ), 'rishows-din', '<a href="http://kangabell.co">Kay Belardinelli</a>' );
-				?>
+			<?php
+			// Last updated show
+			$loop = new WP_Query( array(
+			  'posts_per_page'=>1,
+			  'post_type'=>'tribe_events'
+			) );
+			while ($loop->have_posts()) :
+			  $loop->the_post();
+			  $last_update = get_the_modified_date();
+			endwhile; wp_reset_postdata();
+			echo 'Last updated: ' . $last_update;
+			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
