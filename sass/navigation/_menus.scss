@@ -1,7 +1,10 @@
 .main-navigation {
+	padding: 0.5rem;
 	position: absolute;
-	top: 0.5rem;
-	right: 0.5rem;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
 
 	ul {
 		display: none;
@@ -48,13 +51,10 @@
 		}
 	}
 
-	li {
-		display: inline-block;
-		margin-right: 1rem;
-	}
-
 	a {
 		display: block;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
 	}
 
 	.current_page_item > a,
@@ -63,19 +63,46 @@
 	.current-menu-ancestor > a {
 	}
 
+	> div { // menu container
+		background: $color__background-body;
+		text-align: right;
+	}
+
+	&.toggled > div {
+		padding: 2rem 0;
+	}
+
 	@media screen and (min-width: 37.5em) {
 		transform: rotate(90deg) translateX(100%);
 		transform-origin: top right;
 		z-index: 1;
 		top: 8vh;
 		right: 2vw;
+
+		a {
+			padding: 0;
+		}
+
+		li {
+			display: inline-block;
+			margin-right: 1rem;
+		}
+
+		> div {
+			text-align: left;
+		}
 	}
-}
+} // .main-navigation
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.menu-toggle {
+	position: absolute;
+    right: 0.5rem;
 }
 
 @media screen and (min-width: 37.5em) {
