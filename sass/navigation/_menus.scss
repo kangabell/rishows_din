@@ -1,15 +1,7 @@
-.site-header {
-	display: flex;
-	justify-content: space-between;
-}
-
 .main-navigation {
 	position: absolute;
-	transform: rotate(90deg) translateX(100%);
-	transform-origin: top right;
-	z-index: 1;
-	top: 0;
-	right: 0;
+	top: 0.5rem;
+	right: 0.5rem;
 
 	ul {
 		display: none;
@@ -72,7 +64,11 @@
 	}
 
 	@media screen and (min-width: 37.5em) {
-		position: static;
+		transform: rotate(90deg) translateX(100%);
+		transform-origin: top right;
+		z-index: 1;
+		top: 8vh;
+		right: 2vw;
 	}
 }
 

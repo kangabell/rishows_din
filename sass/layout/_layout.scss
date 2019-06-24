@@ -1,0 +1,16 @@
+@media screen and (min-width: 37.5em) {
+
+	.site-header,
+	.site-main,
+	.site-footer {
+		margin: 0 auto;
+		max-width: $size__site-main;
+	}
+
+	.site-main {
+		padding-right: 2rem;
+	}
+
+}
+
+@import "no-sidebar";
