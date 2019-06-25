@@ -116,7 +116,6 @@ body {
 }
 
 .site-description {
-	color: $color__link;
 	font-family: $font__alt;
 	font-weight: 600;
 	margin-bottom: 0;
@@ -131,8 +130,9 @@ body {
 	margin: 0 0 2rem;
 	a {
 		border: 0;
-		color: $color__text-main;
+		color: adjust-color($color__link, $saturation: 20, $lightness: -12);
 		letter-spacing: 0.085em;
+		margin-left: -0.05em; // hack
 	}
 	span {
 		letter-spacing: 0.05em;
@@ -151,6 +151,7 @@ body {
 }
 
 .event-title {
+	color: adjust-color($color__link, $saturation: 20, $lightness: -12);
 	font-size: 1rem;
 	line-height: 1.125;
 	margin: 0;
