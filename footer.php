@@ -25,7 +25,7 @@
 			  $loop->the_post();
 			  $last_update = get_the_modified_date();
 			endwhile; wp_reset_postdata();
-			echo 'Last updated: ' . $last_update;
+			echo '<h4>Last updated</h4>' . $last_update;
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

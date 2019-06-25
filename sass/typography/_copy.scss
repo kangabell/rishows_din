@@ -43,3 +43,10 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+.entry-content {
+	font-family: $font__alt;
+	p {
+		max-width: 40rem;
+	}
+}

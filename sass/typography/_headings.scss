@@ -2,3 +2,26 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: $font__alt;
 }
+
+h1 {
+	font-size: $h2-font-size;
+	margin-bottom: 0;
+	@media screen and (min-width: 37.5em) {
+		font-size: $h1-font-size;
+	}
+}
+
+h2 {
+	font-size: $h2-font-size;
+	margin: 1.5em 0 0.75em;
+}
+
+h3 {
+	font-size: $h3-font-size;
+}
+
+h4 {
+	@extend %alt-type;
+	font-size: $h4-font-size;
+	margin: 0;
+}

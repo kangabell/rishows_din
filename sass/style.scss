@@ -112,7 +112,7 @@ html {
 body {
 	background: url('img/lightpaperfibers.png');
 	background-size: 250px 150px;
-	padding: 0.5rem;
+	padding: 0.5rem 0.5rem 4rem;
 }
 
 .site-description {
@@ -127,12 +127,15 @@ body {
 
 .site-title {
 	font-size: 3.375rem;
-	letter-spacing: 0.075em;
 	line-height: 1;
-	margin: 0 0 0.5em;
+	margin: 0 0 2rem;
 	a {
 		border: 0;
 		color: $color__text-main;
+		letter-spacing: 0.085em;
+	}
+	span {
+		letter-spacing: 0.05em;
 	}
 	@media screen and (min-width: 37.5em) {
 		font-size: 7.594rem;
@@ -140,7 +143,7 @@ body {
 }
 
 .tribe-events-list-separator-month {
-	display: none;
+	font-size: $h3-font-size;
 }
 
 .event-meta {
@@ -165,4 +168,16 @@ body {
 	&:active {
 		color: $color__text-main;
 	}
+}
+
+#tribe-events-content.tribe-events-list {
+	margin-bottom: 2rem; // override
+}
+
+.site-footer {
+	text-align: right;
+}
+
+.site-info h4 {
+	@extend %alt-type;
 }
