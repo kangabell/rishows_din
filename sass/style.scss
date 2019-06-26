@@ -113,6 +113,10 @@ body {
 	background: url('img/lightpaperfibers.png');
 	background-size: 250px 150px;
 	padding: 0.5rem 0.5rem 4rem;
+	@media screen and (min-width: 37.5em) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 .site-description {
@@ -127,7 +131,7 @@ body {
 .site-title {
 	font-size: 3.375rem;
 	line-height: 1;
-	margin: 0 0 2rem;
+	margin: 0 0 1rem;
 	a {
 		@extend %alt-type;
 		border: 0;
@@ -140,6 +144,7 @@ body {
 	}
 	@media screen and (min-width: 37.5em) {
 		font-size: 7.594rem;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -149,6 +154,13 @@ body {
 
 .event-meta {
 	margin-right: 0.5em;
+}
+
+.event-date {
+	display: block;
+	@media screen and (min-width: 50em) {
+		display: inline;
+	}
 }
 
 .event-title {
