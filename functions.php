@@ -152,6 +152,14 @@ function customized_tribe_single_event_links()	{
 	echo '<a class="tribe-events-ical tribe-events-button" title="Use this to share calendar data with Google Calendar, Apple iCal and other compatible apps" href="' . tribe_get_ical_link() . '">+ Export</a>';
 }
 
+// open event website link in a new window
+// @link https://gist.github.com/cliffordp/3584b8aee70cde484700
+add_filter( 'tribe_get_event_website_link_target', 'rishows_din_blank_target_for_new_window' );
+function rishows_din_blank_target_for_new_window() {
+	return '_blank';
+}
+
+
 /**
  * Implement the Custom Header feature.
  */
