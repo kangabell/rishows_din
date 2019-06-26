@@ -129,6 +129,7 @@ body {
 	line-height: 1;
 	margin: 0 0 2rem;
 	a {
+		@extend %alt-type;
 		border: 0;
 		color: adjust-color($color__link, $saturation: 20, $lightness: -12);
 		letter-spacing: 0.085em;
