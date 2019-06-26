@@ -12,6 +12,7 @@ $color__link: #61456A; // purple
 $color__link-visited: $color__link;
 $color__link-hover: darken($color__link, 10);
 $color__text-main: #404040;
+$color__selection: adjust-color($color__background-body, $saturation: -20, $lightness: -10);
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: $color__text-main;

@@ -55,3 +55,12 @@ big {
 		border-color: $color__text-input;
 	}
 }
+
+::-moz-selection {
+	background: $color__selection;
+	color: darken($color__text-main, 5);
+}
+::selection {
+	background: $color__selection;
+	color: darken($color__text-main, 5);
+}
