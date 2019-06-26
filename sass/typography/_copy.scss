@@ -46,7 +46,9 @@ big {
 
 .entry-content {
 	font-family: $font__alt;
-	p {
+	p,
+	ul,
+	ol {
 		max-width: 40rem;
 	}
 	a {
