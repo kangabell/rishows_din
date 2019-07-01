@@ -1,25 +1,3 @@
-/*!
-Theme Name: RI Shows DIN
-Theme URI: http://underscores.me/
-Author: Kay Belardinelli
-Author URI: http://kangabell.co
-Description: Description
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: rishows-din
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-RI Shows DIN is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -110,7 +88,7 @@ html {
 }
 
 body {
-	background: url('img/lightpaperfibers.png');
+	background: url('../img/lightpaperfibers.png');
 	background-size: 250px 150px;
 	padding: 0.5rem 0.5rem 4rem;
 	@media screen and (min-width: 37.5em) {

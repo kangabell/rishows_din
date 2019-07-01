@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'rishows_din_widgets_init' );
  * Enqueue scripts and styles.
  */
 function rishows_din_scripts() {
-	wp_enqueue_style( 'rishows-din-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'rishows-din-style', get_template_directory_uri() . '/css/style.css' );
 
 	wp_enqueue_script( 'rishows-din-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
