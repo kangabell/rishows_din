@@ -5,6 +5,7 @@
 		<?php echo tribe_get_start_date(); ?>
 		<?php the_title('<h1>', '</h1>') ?>
 		<?php the_content(); ?>
+		<?php the_post_thumbnail(); ?>
 		<p>
 			<?php
 			echo '<strong>' . tribe_get_venue() . '</strong><br>';
