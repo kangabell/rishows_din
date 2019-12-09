@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 </span>
 
 <h3 class="event-meta event-title">
-	<?php the_title() ?>
+	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 </h3>
 
 <span class="event-meta event-venue">
