@@ -141,7 +141,7 @@ function customized_tribe_single_event_links()	{
 	if ( is_single() && post_password_required() ) {
 		return;
 	}
-	echo '<a class="tribe-events-ical tribe-events-button" title="Use this to share calendar data with Google Calendar, Apple iCal and other compatible apps" href="' . tribe_get_ical_link() . '">+ Export</a>';
+	echo '<a class="tribe-events-ical tribe-events-button button" title="Use this to share calendar data with Google Calendar, Apple iCal and other compatible apps" href="' . tribe_get_ical_link() . '">+ Export</a>';
 }
 
 // open event website link in a new window

@@ -33,7 +33,7 @@
 		?>
 		<hr>
 		<p>
-			<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( '&laquo; All Shows', $events_label_plural ); ?></a>
+			<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( '&#8592; All Shows', $events_label_plural ); ?></a>
 		</p>
 
 	<?php endwhile; ?>
