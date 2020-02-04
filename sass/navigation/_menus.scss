@@ -58,6 +58,21 @@
 		padding-bottom: 0.5em;
 	}
 
+	.show-submit a {
+		border: 2px solid;
+		border-radius: 3px;
+		color: lighten(mix($color__link, $color__text-main, 40%), 10);
+		margin-bottom: 1rem;
+		padding: 0.125em 0.5em;
+
+		&:hover,
+		&:focus {
+			background: $color__link;
+			border-color: $color__background-body;
+			color: $color__background-body;
+		}
+	}
+
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
@@ -71,15 +86,17 @@
 
 	&.toggled > div {
 		border-bottom: 5px solid $color__background-screen;
-		padding: 2rem 0;
+		padding: 5rem 0 3rem;
 	}
 
 	@media screen and (min-width: 37.5em) {
+		$button-offset: 4rem;
+
 		padding: 0.25rem;
 		transform: rotate(90deg) translateX(100%);
 		transform-origin: top right;
 		z-index: 1;
-		top: 8vh;
+		top: calc(#{$button-offset} + 2rem);
 		right: 2vw;
 
 		a {
@@ -93,6 +110,14 @@
 
 		> div {
 			text-align: left;
+		}
+
+		// "Submit a Show" breaks out on its own
+		.show-submit {
+			left: -$button-offset; // actually 'top', because of rotation
+			transform: rotate(-90deg) translateX(-100%);
+			transform-origin: top left;
+			position: absolute;
 		}
 	}
 } // .main-navigation
