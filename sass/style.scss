@@ -153,17 +153,6 @@ body {
 	}
 }
 
-.event-url a {
-	border: 0;
-	color: adjust-color($color__link, $saturation: 20, $lightness: 10);
-	font-size: 1.25rem;
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-}
-
 #tribe-events-content.tribe-events-list {
 	margin-bottom: 2rem; // override
 }

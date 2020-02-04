@@ -46,10 +46,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</span>
 <?php endif; ?>
 
-<?php if ( tribe_get_event_website_link() ) : ?>
-	<span class="event-meta event-url">
-		<?php echo tribe_get_event_website_link( $event, '&#8594;' ); ?>
-	</span>
-<?php endif; ?>
-
 <hr>
