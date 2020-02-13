@@ -46,7 +46,7 @@
 			endif;
 
 			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
+			if ( is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">RI <span>Shows</span></a></h1>
 				<?php
