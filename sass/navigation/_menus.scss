@@ -63,12 +63,12 @@
 		border-radius: 3px;
 		color: lighten(mix($color__link, $color__text-main, 40%), 10);
 		margin-bottom: 1rem;
-		padding: 0.125em 0.5em;
+		padding: 0.125em 0.5em 0.12em;
 
 		&:hover,
 		&:focus {
 			background: $color__link;
-			border-color: $color__background-body;
+			border-color: $color__link;
 			color: $color__background-body;
 		}
 	}
