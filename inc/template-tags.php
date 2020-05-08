@@ -26,7 +26,7 @@ if ( ! function_exists( 'rishows_din_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'rishows-din' ),
+			esc_html_x( 'Posted %s', 'post date', 'rishows-din' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -58,13 +58,6 @@ if ( ! function_exists( 'rishows_din_entry_footer' ) ) :
 	function rishows_din_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'rishows-din' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'rishows-din' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'rishows-din' ) );
 			if ( $tags_list ) {

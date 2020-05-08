@@ -23,7 +23,6 @@
 			<div class="entry-meta">
 				<?php
 				rishows_din_posted_on();
-				rishows_din_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
