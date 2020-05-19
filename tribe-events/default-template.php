@@ -18,7 +18,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 <main id="tribe-events-pg-template" class="site-main">
-	<?php tribe_events_before_html(); ?>
+	<?php
+	// only show "before" html on homepage
+	if ( is_home() ) {
+		tribe_events_before_html();
+	}
+	?>
 	<?php tribe_get_view(); ?>
 	<?php tribe_events_after_html(); ?>
 </main> <!-- #tribe-events-pg-template -->
