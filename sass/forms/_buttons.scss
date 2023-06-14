@@ -2,7 +2,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.button {
+.button,
+.tribe-common button {
 	@extend %alt-type;
 	border: 1px solid;
 	border-color: $color__border-button;

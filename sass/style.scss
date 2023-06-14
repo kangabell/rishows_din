@@ -125,6 +125,11 @@ body {
 	}
 }
 
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .tribe-events-calendar-list__month-separator {
 	font-size: $h3-font-size;
 }
@@ -154,6 +159,13 @@ body {
 
 #tribe-events-content.tribe-events-list {
 	margin-bottom: 2rem; // override
+}
+
+// Subscribe/Export dropdown
+.tribe-events-c-subscribe-dropdown__button .tribe-events-c-subscribe-dropdown__button-text {
+	align-items: center;
+	display: flex;
+	padding-right: 0.85rem;
 }
 
 // Announcement
