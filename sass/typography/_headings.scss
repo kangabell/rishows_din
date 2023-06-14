@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: $font__alt;
 	line-height: 1.125em;
+	text-transform: uppercase;
 }
 
 h1, h2 {
@@ -19,6 +20,11 @@ h1 {
 h2 {
 	font-size: $h2-font-size;
 	margin: 1em 0 0.75em;
+
+	.tribe-common & {
+		margin-top: 1em;
+		margin-bottom: 0.75em;
+	}
 }
 
 h3 {

@@ -11,6 +11,7 @@ input[type="submit"],
 	color: $color__text-main;
 	cursor: pointer;
 	display: table;
+	font-family: $font__alt;
 	@include font-size(0.75);
 	font-weight: 800;
 	line-height: 1;

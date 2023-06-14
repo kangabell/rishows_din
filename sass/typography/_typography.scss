@@ -1,5 +1,4 @@
 body,
-button,
 input,
 select,
 optgroup,
@@ -11,7 +10,7 @@ textarea {
 }
 
 %alt-type {
-	font-family: $font__main;
+	font-family: $font__alt;
 	letter-spacing: 0.075em;
 	text-transform: uppercase;
 }
