@@ -88,7 +88,7 @@ html {
 }
 
 body {
-	background: url('../img/lightpaperfibers.png');
+	// background: url('../img/lightpaperfibers.png');
 	background-size: 250px 150px;
 	padding: 0.5rem 0.5rem 0;
 	@media screen and (min-width: 37.5em) {
@@ -113,7 +113,6 @@ body {
 	a {
 		@extend %alt-type;
 		border: 0;
-		color: adjust-color($color__link, $saturation: 20, $lightness: -12);
 		letter-spacing: 0.085em;
 		margin-left: -0.05em; // hack
 	}
