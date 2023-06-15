@@ -1,21 +1,49 @@
-$color__background-body: #020202;
-$color__background-screen: #212121;
-$color__background-hr: #303030;
-$color__background-button: transparent;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
 
-$color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
-$color__link: #e6c1f2; // lavender
+// Color Palette
+$deepsea: #020B1D;
+$black: #01050F;
+$medium: #3E3A37;
+$white: #F2EDE7;
+$cream: #E5D9C9;
+$desert: #B6A574;
+$plum: #4F1659;
+$lilac: #B78BAD;
+$lavender: #f2c1ea;
+$sleepdust: #26234B;
+
+// apply color to standard variables
+:root {
+	--color-base: #{$deepsea};
+	--color-darker: #{$black};
+	--color-neutral: #{$medium};
+	--color-contrast: #{$cream};
+	--color-brighter: #{$white};
+	--color-primary: #{$lilac};
+	--color-secondary: #{$plum};
+	--color-tertiary: #{$desert};
+	--color-quaternary: #{$sleepdust};
+	--color-quinary: #{$lavender};
+}
+
+$color__background-body: var(--color-darker);
+$color__background-screen: var(--color-neutral);
+$color__background-hr: var(--color-neutral);
+$color__background-button: var(--color-neutral);
+$color__background-button-hover: var(--color-base);
+$color__background-pre: var(--color-neutral);
+$color__background-ins: var(--color-neutral);
+
+$color__text-screen: var(--color-contrast);
+$color__text-input: var(--color-contrast);
+$color__text-input-focus: var(--color-contrast);
+$color__link: var(--color-quinary);
 $color__link-visited: $color__link;
-$color__link-hover: lighten($color__link, 10);
-$color__text-main: #bfbfbf;
-$color__selection: adjust-color($color__background-body, $saturation: -20, $lightness: -10);
+$color__link-hover: var(--color-primary);
+$color__text-main: var(--color-contrast);
+$color__selection: var(--color-secondary);
 
-$color__border-button: $color__background-hr;
-$color__border-button-hover: $color__text-main;
-$color__border-button-focus: $color__border-button-hover;
-$color__border-input: #ccc;
-$color__border-abbr: #666;
+$color__border-button: linear-gradient(90deg, var(--color-tertiary) 0%, var(--color-primary) 100%);
+$color__border-button-hover: var(--color-primary);
+$color__border-button-focus: var(--color-primary);
+$color__border-input: var(--color-tertiary);
+$color__border-abbr: var(--color-tertiary);

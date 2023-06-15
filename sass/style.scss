@@ -147,7 +147,6 @@ body {
 }
 
 .event-title {
-	color: adjust-color($color__link, $saturation: 20, $lightness: -12);
 	font-size: 1rem;
 	line-height: 1.125;
 	margin: 0;
@@ -171,7 +170,7 @@ body {
 
 // Announcement
 .tribe-events-before-html {
-	background: darken($color__background-screen, 3);
+	background: $color__background-hr;
 	margin-bottom: 2rem;
 	padding: 0.5rem 1rem;
 	p {
@@ -180,7 +179,8 @@ body {
 }
 
 .site-footer {
-	background: $color__background-hr;
+	background-color: var(--color-primary);
+	background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
 	padding: 2rem 1rem;
 	margin-top: 2rem;
 	margin-left: -0.5rem;
