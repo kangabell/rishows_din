@@ -48,11 +48,11 @@
 			the_custom_logo();
 			if ( is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">RI <span>Shows</span></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></h1>
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">RI <span>Shows</span></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></p>
 				<?php
 			endif;
 			?>
@@ -64,6 +64,7 @@
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
+				'depth'			 => 1
 			) );
 			?>
 		</nav><!-- #site-navigation -->

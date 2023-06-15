@@ -19,6 +19,7 @@
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'footer-menu',
+				'depth'			 => 1
 			) );
 			?>
 		</nav><!-- #site-navigation -->
