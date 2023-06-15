@@ -124,6 +124,9 @@ body {
 		margin-bottom: 2rem;
 	}
 }
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+	padding-top: 0;
+}
 
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
 	padding-left: 0;
@@ -134,8 +137,8 @@ body {
 	font-size: $h3-font-size;
 }
 
-.event-meta {
-	margin-right: 0.5em;
+.event-meta.event-date {
+	margin-right: 0.5em; // override
 }
 
 .event-date {
@@ -188,4 +191,15 @@ body {
 		margin-left: -1rem;
 		margin-right: -1rem;
 	}
+}
+
+// Constellation / "SuperParticles" background
+#particles {
+	opacity: 0.75;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }

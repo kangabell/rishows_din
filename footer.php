@@ -23,6 +23,14 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</footer><!-- #colophon -->
+
+	<?php
+	if ( is_page() ) :
+	?>
+		<div id="particles"></div>
+	<?php
+	endif;
+	?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
