@@ -98,8 +98,7 @@ body {
 }
 
 .site-description {
-	font-family: $font__alt;
-	font-weight: 600;
+	font-variation-settings: "wght" 400;
 	margin-bottom: 0;
 	@media screen and (min-width: 37.5em) {
 		font-size: 1.25rem;
