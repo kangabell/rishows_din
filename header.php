@@ -37,25 +37,27 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			$rishows_din_description = get_bloginfo( 'description', 'display' );
-			if ( $rishows_din_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $rishows_din_description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif;
+			<img class="site-logo" src="<?php echo get_template_directory_uri() . '/img/logo-mark_web.svg'; ?>" alt="<?php bloginfo(); ?>" />
+			<div class="text">
+				<?php
+				if ( is_home() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></p>
+					<?php
+				endif;
 
-			the_custom_logo();
-			if ( is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></h1>
+				$rishows_din_description = get_bloginfo( 'description', 'display' );
+				if ( $rishows_din_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $rishows_din_description; /* WPCS: xss ok. */ ?></p>
 				<?php
-			else :
+				endif;
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></p>
-				<?php
-			endif;
-			?>
+			</div>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

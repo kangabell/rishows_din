@@ -97,29 +97,38 @@ body {
 	}
 }
 
-.site-description {
-	font-variation-settings: "wght" 400;
-	margin-bottom: 0;
+.site-branding {
+	align-items: center;
+	display: flex;
+}
+
+.site-logo {
+	width: 4rem;
+	@media screen and (min-width: 50em) {
+		width: 6rem;
+	}
 }
 
 .site-title {
 	font-size: 3.375rem;
 	line-height: 1;
-	margin: 0 0 1rem;
+	margin: 0;
 	a {
 		border: 0;
 		font-variation-settings: "wght" 400;
 	}
-	h1 {
-	}
-}
-.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
-	padding-top: 0;
 }
 
-.tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
-	padding-left: 0;
-	padding-right: 0;
+.site-description {
+	@include font-size(0.875);
+	font-variation-settings: "wght" 400;
+	margin-top: -0.25em;
+	margin-bottom: 0;
+}
+
+.tribe-events .tribe-events-l-container,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+	padding-top: 0;
 }
 
 .tribe-events-calendar-list__month-separator {
