@@ -19,8 +19,13 @@ a {
 	&:active {
 		outline: 0;
 	}
+}
 
-	.site-content & {
+
+// fancy gradient underlines
+@media screen and (min-width: 50em) {
+	
+	.site-content a {
 		position: relative;
 		text-decoration: none;
 		transition: all 0.125s;
@@ -28,6 +33,7 @@ a {
 		&::before,
 		&::after {
 			content: '';
+			display: block;
 			height: 2px;
 			position: absolute;
 			bottom: -0.05em;
@@ -50,4 +56,4 @@ a {
 			opacity: 0;
 		}
 	}
-} // a
+}
