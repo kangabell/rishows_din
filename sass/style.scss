@@ -90,7 +90,9 @@
 
 
 html {
-	font-size: 18px;
+	font-size: 112.5%; // bump average base size from 16 to 18px
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -106,6 +108,9 @@ body {
 .site-branding {
 	align-items: center;
 	display: flex;
+	@media screen and (min-width: 76em) {
+		margin-left: -2.5rem;
+	}
 }
 
 .site-logo {
@@ -116,12 +121,15 @@ body {
 }
 
 .site-title {
-	font-size: 3.375rem;
+	font-size: $h2-font-size;
 	line-height: 1;
 	margin: 0;
 	a {
 		border: 0;
 		font-variation-settings: "wght" 400;
+	}
+	@media screen and (min-width: 37.5em) {
+		font-size: 3.375rem;
 	}
 }
 
@@ -134,7 +142,7 @@ body {
 
 .site-footer {
 	background-color: var(--color-primary);
-	background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
+	background: linear-gradient(-10deg, var(--color-secondary) 0%, var(--color-quaternary) 100%);
 	padding: 2rem 1rem;
 	margin-top: 2rem;
 	margin-left: -0.5rem;

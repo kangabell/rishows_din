@@ -6,7 +6,7 @@ h2, h3, h4, h5, h6, .page-header h1, .entry-header h1 {
 }
 
 h1, h2 {
-	color: $color__link;
+	color: var(--color-lighter);
 }
 
 h1 {

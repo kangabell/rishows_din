@@ -6,6 +6,17 @@
 	padding-top: 0;
 }
 
+.tribe-common .tribe-common-l-container,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+// removed because it was adding overflow on mobile
+.tribe-events .tribe-events-header {
+	display: none;
+}
+
 div.type-tribe_events {
 	display: flex;
 	flex-wrap: wrap;

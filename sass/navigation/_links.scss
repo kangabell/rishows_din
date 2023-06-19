@@ -34,20 +34,21 @@ a {
 		&::after {
 			content: '';
 			display: block;
-			height: 2px;
+			height: 0.075em;
 			position: absolute;
-			bottom: -0.05em;
+			bottom:0;
 			left: 0;
 			right: 0;
 		}
 
 		&::before {
-			background: linear-gradient(90deg, var(--color-tertiary) 0%, var(--color-contrast)  30%, var(--color-primary)  60%, var(--color-tertiary)  100%);
+			background: var(--color-contrast);
 			z-index: -1;
 		}
 
 		&::after {
-			background: var(--color-quaternary);
+			// background: var(--color-quaternary);
+			background: linear-gradient(90deg, var(--color-contrast) 0%, var(--color-secondary)  100%);
 			opacity: 1;
 			transition: opacity 0.125s linear;
 		}
