@@ -1,0 +1,107 @@
+// The Events Calendar Pro by Tribe
+
+
+.tribe-events .tribe-events-l-container,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+	padding-top: 0;
+}
+
+div.type-tribe_events {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 0.5rem;
+	padding-bottom: 0.75rem;
+
+	@media screen and (min-width: 60em) {
+		flex-wrap: nowrap;
+	}
+}
+
+.tribe-events-calendar-list__month-separator {
+	font-size: $h3-font-size;
+}
+
+// Meta
+.event-meta.event {
+	&-title,
+	&-date,
+	&-time,
+	&-cost,
+	&-age {
+		margin-right: 0.5em; // override
+	}
+
+	&-date,
+	&-time,
+	&-cost,
+	&-age,
+	&-venue {
+		background: $color__background-body;
+		outline: 0.5em solid $color__background-body;
+	}
+}
+
+// Event Date
+.event-date {
+	display: block;
+
+	@media screen and (min-width: 60em) {
+		display: inline;
+		flex-basis: 5.5rem;
+	}
+}
+
+// Event Title
+.event-title {
+	color: var(--color-neutral); // for ellipsis
+	font-size: 1rem;
+	line-height: 1.125;
+	flex: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+
+	@media screen and (min-width: 37.5em) {
+		font-size: 1.25rem;
+	}
+
+	@media screen and (min-width: 50em) {
+		flex: 1;
+
+		a {
+			outline: 0.5em solid $color__background-body;
+		}
+
+		&::after {
+			background: $color__background-hr;
+			content: '';
+			height: 1px;
+			width: 100%;
+			position: absolute;;
+			top: 50%;
+			z-index: -1;
+		}
+	}
+}
+
+#tribe-events-content.tribe-events-list {
+	margin-bottom: 2rem; // override
+}
+
+// Subscribe/Export dropdown
+.tribe-events-c-subscribe-dropdown__button .tribe-events-c-subscribe-dropdown__button-text {
+	align-items: center;
+	display: flex;
+	padding-right: 0.85rem;
+}
+
+// Announcement
+.tribe-events-before-html {
+	background: $color__background-hr;
+	margin-bottom: 2rem;
+	padding: 0.5rem 1rem;
+	p {
+		margin: 0.25em 0;
+	}
+}
