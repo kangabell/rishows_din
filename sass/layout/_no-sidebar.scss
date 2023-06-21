@@ -3,14 +3,13 @@
 	.no-sidebar {
 
 		.site-header,
+		.site-main,
 		.footer-navigation {
 			margin: 0 auto;
 			max-width: $size__site-main;
 		}
 
 		.site-main {
-			margin: 0 auto;
-			max-width: $size__site-narrow;
 			padding-right: 2.5rem;
 		}
 

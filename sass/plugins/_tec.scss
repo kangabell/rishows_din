@@ -120,7 +120,7 @@ div.type-tribe_events {
 }
 
 // Announcement
-.tribe-events-before-html {
+.tribe-events-before-html:not(:empty) {
 	background: $color__background-hr;
 	margin-bottom: 2rem;
 	padding: 0.5rem 1rem;
