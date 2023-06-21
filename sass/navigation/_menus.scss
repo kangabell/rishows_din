@@ -107,11 +107,11 @@
 
 		left: auto;
 		padding: 0.25rem;
-		transform: rotate(90deg) translateX(100%);
+		transform: rotate(89deg) translateX(100%);
 		transform-origin: top right;
 		z-index: 1;
 		top: calc(#{$button-offset} + 2rem);
-		right: 2vw;
+		right: 1rem;
 
 		> div {
 			text-align: left;
@@ -124,6 +124,10 @@
 			transform-origin: top left;
 			position: absolute;
 		}
+	}
+
+	@media screen and (min-width: 88em) {
+		right: -2rem;
 	}
 } // .main-navigation
 

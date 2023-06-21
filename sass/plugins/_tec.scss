@@ -1,5 +1,8 @@
 // The Events Calendar Pro by Tribe
 
+#tribe-events-pg-template {
+	padding-left: 0;
+}
 
 // LIST PAGE
 
@@ -127,12 +130,4 @@ div.type-tribe_events {
 	p {
 		margin: 0.25em 0;
 	}
-}
-
-
-// SINGLE EVENT PAGE
-
-#tribe-events-pg-template {
-	padding-left: 0;
-	padding-right: 0;
 }

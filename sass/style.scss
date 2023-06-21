@@ -108,8 +108,9 @@ body {
 .site-branding {
 	align-items: center;
 	display: flex;
-	@media screen and (min-width: 76em) {
+	@media screen and (min-width: 88em) {
 		margin-left: -2.5rem;
+		transform: rotate(-1deg);
 	}
 }
 

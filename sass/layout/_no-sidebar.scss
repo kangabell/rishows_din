@@ -9,8 +9,14 @@
 			max-width: $size__site-main;
 		}
 
+		.site-header {
+			padding-bottom: 2rem;
+			position: relative;
+		}
+
+		// add space for nav
 		.site-main {
-			padding-right: 2.5rem;
+			padding-right: 4rem;
 		}
 
 		// homepage
