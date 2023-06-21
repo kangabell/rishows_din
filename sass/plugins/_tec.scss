@@ -1,6 +1,8 @@
 // The Events Calendar Pro by Tribe
 
 
+// LIST PAGE
+
 .tribe-events .tribe-events-l-container,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
 	padding-top: 0;
@@ -101,6 +103,16 @@ div.type-tribe_events {
 }
 
 // Subscribe/Export dropdown
+.tribe-common .tribe-common-c-btn-border {
+	padding: 0;
+}
+
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__list-item a {
+	@include font-size(0.875);
+	font-family: $font__alt;
+	padding: 0;
+}
+
 .tribe-events-c-subscribe-dropdown__button .tribe-events-c-subscribe-dropdown__button-text {
 	align-items: center;
 	display: flex;
@@ -115,4 +127,12 @@ div.type-tribe_events {
 	p {
 		margin: 0.25em 0;
 	}
+}
+
+
+// SINGLE EVENT PAGE
+
+#tribe-events-pg-template {
+	padding-left: 0;
+	padding-right: 0;
 }
