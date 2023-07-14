@@ -152,6 +152,9 @@
 }
 
 .footer-navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
 
 	a {
@@ -159,7 +162,23 @@
 		@include font-size(0.75);
 	}
 
+	.site-logo {
+		border: 1px dotted transparent;
+		display: block;
+		width: 4rem;
+
+		&:focus {
+			border-color: inherit;
+		}
+
+		@media screen and (min-width: 60em) {
+			width: 6rem;
+		}
+	}
+
 	@media screen and (min-width: 37.5em) {
+		flex-direction: row;
+		justify-content: space-between;
 		text-align: right;
 
 		a {
