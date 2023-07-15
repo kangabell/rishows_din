@@ -32,6 +32,37 @@ div.type-tribe_events {
 	}
 }
 
+@keyframes rollOut {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: 100%;
+	}
+}
+
+// pseudo element uncovers list on load
+.tribe-events-calendar-list::after {
+	background: var(--color-darker);
+	box-shadow: 1rem -1rem 4rem 1rem var(--color-darker);
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	animation-delay: 0.125s;
+	animation-duration: 0.95s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-name: rollOut;
+	animation-timing-function: ease-out;
+
+	@media screen and (min-width: 60em) {
+		animation-duration: .75s;
+	}
+}
+
 .tribe-events-calendar-list__month-separator {
 	font-size: $h3-font-size;
 }
