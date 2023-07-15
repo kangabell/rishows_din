@@ -39,13 +39,13 @@
 
 	<?php if ( tribe_get_cost() ) : ?>
 		<span class="event-meta event-cost">
-			<?php echo tribe_get_cost( $post_id, true ); ?>
+			<?php echo tribe_get_cost( $event->ID, true ); ?>
 		</span>
 	<?php endif; ?>
 
 	<?php if ( tribe_get_event_meta() ) : ?>
 		<span class="event-meta event-age">
-			<?php echo tribe_get_event_meta( $postId, '_ecp_custom_2' ); ?>
+			<?php echo tribe_get_event_meta( $event->ID, '_ecp_custom_2' ); ?>
 		</span>
 	<?php endif; ?>
 
