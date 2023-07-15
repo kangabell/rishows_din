@@ -73,17 +73,7 @@
 	}
 
 	.show-submit a {
-		border: 2px solid;
-		border-radius: 3px;
 		margin-bottom: 1rem;
-		padding: 0.125em 0.5em 0.12em;
-
-		&:hover,
-		&:focus {
-			background: $color__link;
-			border-color: $color__link;
-			color: $color__background-body;
-		}
 	}
 
 	.current_page_item > a,
