@@ -107,10 +107,9 @@
 			text-align: left;
 		}
 
-		// "Submit a Show" breaks out on its own
 		.show-submit {
 			left: -$button-offset; // actually 'top', because of rotation
-			transform: rotate(-90deg) translateX(-100%);
+			transform: rotate(-87deg) translateX(-100%);
 			transform-origin: top left;
 			position: absolute;
 		}

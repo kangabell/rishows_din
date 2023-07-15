@@ -14,12 +14,12 @@ window.onload = function(){
 			element: '#particles'
 		},
 		particles: {
-			velocity: 5,
-			color: '0xd7c69e',
+			velocity: 4,
+			color: '0xBDAE99',
 			fadeInDuration: 5
 		},
 		lines: {
-			velocity: 5,
+			velocity: 4,
 			maxOpacity: '0.3'
 		}
 	})

@@ -1,6 +1,7 @@
 a {
 	color: $color__link;
-	font-weight: 800;
+	font-weight: 600;
+	font-variation-settings: "wght" 600;
 	text-decoration: none;
 
 	&:focus {
