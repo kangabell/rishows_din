@@ -23,13 +23,12 @@
 }
 
 div.type-tribe_events {
-	display: flex;
-	flex-wrap: wrap;
 	padding-top: 0.5rem;
 	padding-bottom: 0.75rem;
 
 	@media screen and (min-width: 60em) {
-		flex-wrap: nowrap;
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 
@@ -46,58 +45,26 @@ div.type-tribe_events {
 	&-age {
 		margin-right: 0.5em; // override
 	}
-
-	&-date,
-	&-time,
-	&-cost,
-	&-age,
-	&-venue {
-		background: $color__background-body;
-		outline: 0.5em solid $color__background-body;
-	}
 }
 
 // Event Date
 .event-date {
-	display: block;
 
 	@media screen and (min-width: 60em) {
-		display: inline;
 		flex-basis: 5.5rem;
 	}
 }
 
 // Event Title
 .event-title {
-	color: var(--color-neutral); // for ellipsis
 	font-size: 1rem;
 	line-height: 1.125;
-	flex: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	position: relative;
 
 	@media screen and (min-width: 37.5em) {
 		font-size: 1.25rem;
-	}
-
-	@media screen and (min-width: 50em) {
-		flex: 1;
-
-		a {
-			outline: 0.5em solid $color__background-body;
-		}
-
-		&::after {
-			background: $color__background-hr;
-			content: '';
-			height: 1px;
-			width: 100%;
-			position: absolute;;
-			top: 50%;
-			z-index: -1;
-		}
 	}
 }
 

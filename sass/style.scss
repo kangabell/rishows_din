@@ -106,18 +106,10 @@ body {
 }
 
 .site-branding {
-	align-items: center;
-	display: flex;
+
 	@media screen and (min-width: 88em) {
 		margin-left: -2.5rem;
 		transform: rotate(-1deg);
-	}
-}
-
-.site-logo {
-	width: 4rem;
-	@media screen and (min-width: 60em) {
-		width: 6rem;
 	}
 }
 
@@ -128,6 +120,7 @@ body {
 	a {
 		border: 0;
 		font-variation-settings: "wght" 400;
+		text-transform: uppercase;
 	}
 	@media screen and (min-width: 37.5em) {
 		font-size: 3.375rem;
@@ -136,7 +129,7 @@ body {
 
 .site-description {
 	@include font-size(0.875);
-	font-variation-settings: "wght" 400;
+	font-variation-settings: "wght" 600;
 	margin-top: -0.25em;
 	margin-bottom: 0;
 }
@@ -148,6 +141,7 @@ body {
 	margin-top: 2rem;
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
+
 	@media screen and (min-width: 37.5em) {
 		margin-left: -1rem;
 		margin-right: -1rem;
