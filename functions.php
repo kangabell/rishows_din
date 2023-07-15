@@ -114,7 +114,17 @@ add_action( 'widgets_init', 'rishows_din_widgets_init' );
 function rishows_din_scripts() {
 	wp_enqueue_style( 'rishows-din-style', get_template_directory_uri() . '/css/style.css' );
 
+	wp_enqueue_style( 'rishows-din-print-style', get_template_directory_uri() . '/css/print.css', array(), false,'print' );
+
 	wp_enqueue_script( 'rishows-din-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	// SuperParticles.js stuff
+	// src: https://github.com/T-vK/SuperParticles
+	if ( is_page() ) {
+		wp_enqueue_script( 'pixi', 'https://pixijs.download/dev-graphics-batch-pool/pixi.js', array(), '20230614', true );
+		wp_enqueue_script( 'superparticles', 'https://cdn.jsdelivr.net/gh/T-vK/SuperParticles@master/SuperParticles.js', array(), '20230614', true );
+		wp_enqueue_script( 'rishows-din-superparticles', get_template_directory_uri() . '/js/plugins/super-particles.js', array(), '20230614', true );
+	}
 
 	wp_enqueue_script( 'rishows-din-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

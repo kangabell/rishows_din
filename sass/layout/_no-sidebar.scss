@@ -9,10 +9,20 @@
 			max-width: $size__site-main;
 		}
 
-		.site-main {
-			padding-right: 2.5rem;
+		.site-header {
+			padding-bottom: 2rem;
+			position: relative;
 		}
 
+		// add space for nav
+		.site-main {
+			padding-right: 4rem;
+		}
+
+		// homepage
+		&.blog .site-main {
+			max-width: $size__site-main;
+		}
 	}
 
 }

@@ -1,0 +1,100 @@
+// The Events Calendar Pro by Tribe
+
+#tribe-events-pg-template {
+	padding-left: 0;
+}
+
+// LIST PAGE
+
+.tribe-events .tribe-events-l-container,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+	padding-top: 0;
+}
+
+.tribe-common .tribe-common-l-container,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+// removed because it was adding overflow on mobile
+.tribe-events .tribe-events-header {
+	display: none;
+}
+
+div.type-tribe_events {
+	padding-top: 0.5rem;
+	padding-bottom: 0.75rem;
+
+	@media screen and (min-width: 60em) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.tribe-events-calendar-list__month-separator {
+	font-size: $h3-font-size;
+}
+
+// Meta
+.event-meta.event {
+	&-title,
+	&-date,
+	&-time,
+	&-cost,
+	&-age {
+		margin-right: 0.5em; // override
+	}
+}
+
+// Event Date
+.event-date {
+
+	@media screen and (min-width: 60em) {
+		flex-basis: 5.5rem;
+	}
+}
+
+// Event Title
+.event-title {
+	font-size: 1rem;
+	line-height: 1.125;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	@media screen and (min-width: 37.5em) {
+		font-size: 1.25rem;
+	}
+}
+
+#tribe-events-content.tribe-events-list {
+	margin-bottom: 2rem; // override
+}
+
+// Subscribe/Export dropdown
+.tribe-common .tribe-common-c-btn-border {
+	padding: 0;
+}
+
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__list-item a {
+	@include font-size(0.875);
+	font-family: $font__alt;
+	padding: 0;
+}
+
+.tribe-events-c-subscribe-dropdown__button .tribe-events-c-subscribe-dropdown__button-text {
+	align-items: center;
+	display: flex;
+	padding-right: 0.85rem;
+}
+
+// Announcement
+.tribe-events-before-html:not(:empty) {
+	background: $color__background-hr;
+	margin-bottom: 2rem;
+	padding: 0.5rem 1rem;
+	p {
+		margin: 0.25em 0;
+	}
+}

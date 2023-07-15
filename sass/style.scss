@@ -83,12 +83,20 @@
 --------------------------------------------------------------*/
 @import "media/media";
 
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+@import "plugins/tec";
+
+
 html {
-	font-size: 18px;
+	font-size: 112.5%; // bump average base size from 16 to 18px
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
-	background: url('../img/lightpaperfibers.png');
+	background: url('../img/darkpaperfibers.png');
 	background-size: 250px 150px;
 	padding: 0.5rem 0.5rem 0;
 	@media screen and (min-width: 37.5em) {
@@ -97,84 +105,56 @@ body {
 	}
 }
 
-.site-description {
-	font-family: $font__alt;
-	font-weight: 600;
-	margin-bottom: 0;
-	@media screen and (min-width: 37.5em) {
-		font-size: 1.25rem;
+.site-branding {
+
+	@media screen and (min-width: 88em) {
+		margin-left: -2.5rem;
+		transform: rotate(-1deg);
 	}
 }
 
 .site-title {
-	font-size: 3.375rem;
+	font-size: $h2-font-size;
 	line-height: 1;
-	margin: 0 0 1rem;
-	a {
-		@extend %alt-type;
-		border: 0;
-		color: adjust-color($color__link, $saturation: 20, $lightness: -12);
-		letter-spacing: 0.085em;
-		margin-left: -0.05em; // hack
-	}
-	span {
-		letter-spacing: 0.05em;
-	}
-	@media screen and (min-width: 37.5em) {
-		font-size: 7.594rem;
-		margin-bottom: 2rem;
-	}
-}
-
-.tribe-events-list-separator-month {
-	font-size: $h3-font-size;
-}
-
-.event-meta {
-	margin-right: 0.5em;
-}
-
-.event-date {
-	display: block;
-	@media screen and (min-width: 50em) {
-		display: inline;
-	}
-}
-
-.event-title {
-	color: adjust-color($color__link, $saturation: 20, $lightness: -12);
-	font-size: 1rem;
-	line-height: 1.125;
 	margin: 0;
+	a {
+		border: 0;
+		font-variation-settings: "wght" 400;
+		text-transform: uppercase;
+	}
 	@media screen and (min-width: 37.5em) {
-		font-size: 1.25rem;
-		display: inline;
-		margin-right: 0.25em;
+		font-size: 3.375rem;
 	}
 }
 
-#tribe-events-content.tribe-events-list {
-	margin-bottom: 2rem; // override
-}
-
-// Announcement
-.tribe-events-before-html {
-	background: darken($color__background-screen, 3);
-	margin-bottom: 2rem;
-	padding: 0.5rem 1rem;
-	p {
-		margin: 0.25em 0;
-	}
+.site-description {
+	@include font-size(0.875);
+	font-variation-settings: "wght" 600;
+	margin-top: -0.25em;
+	margin-bottom: 0;
 }
 
 .site-footer {
-	background: $color__background-hr;
+	background-color: var(--color-primary);
+	background: linear-gradient(-10deg, var(--color-secondary) 0%, var(--color-quaternary) 100%);
 	padding: 2rem 1rem;
 	margin-top: 2rem;
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
+
 	@media screen and (min-width: 37.5em) {
 		margin-left: -1rem;
 		margin-right: -1rem;
 	}
+}
+
+// Constellation / "SuperParticles" background
+#particles {
+	opacity: 0.75;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }

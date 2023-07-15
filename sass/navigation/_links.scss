@@ -1,23 +1,29 @@
 a {
-	border-bottom: 2px solid transparent;
 	color: $color__link;
 	font-weight: 800;
 	text-decoration: none;
 
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		border-color: $color__text-main;
-		color: $color__link-hover;
-	}
 	&:focus {
 		outline: thin dotted;
 	}
 	&:hover,
 	&:active {
 		outline: 0;
+	}
+}
+
+
+// fancy gradient underlines
+@media screen and (min-width: 50em) {
+	
+	.site-content a {
+		position: relative;
+		text-decoration: underline var(--color-neutral) solid 0.075em;
+		transition: all 0.125s;
+
+		&:hover,
+		&:focus {
+			text-decoration-color: var(--color-contrast);
+		}
 	}
 }

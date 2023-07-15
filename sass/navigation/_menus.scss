@@ -73,18 +73,7 @@
 	}
 
 	.show-submit a {
-		border: 2px solid;
-		border-radius: 3px;
-		color: lighten(mix($color__link, $color__text-main, 40%), 10);
 		margin-bottom: 1rem;
-		padding: 0.125em 0.5em 0.12em;
-
-		&:hover,
-		&:focus {
-			background: $color__link;
-			border-color: $color__link;
-			color: $color__background-body;
-		}
 	}
 
 	.current_page_item > a,
@@ -108,11 +97,11 @@
 
 		left: auto;
 		padding: 0.25rem;
-		transform: rotate(90deg) translateX(100%);
+		transform: rotate(89deg) translateX(100%);
 		transform-origin: top right;
 		z-index: 1;
 		top: calc(#{$button-offset} + 2rem);
-		right: 2vw;
+		right: 1rem;
 
 		> div {
 			text-align: left;
@@ -125,6 +114,10 @@
 			transform-origin: top left;
 			position: absolute;
 		}
+	}
+
+	@media screen and (min-width: 88em) {
+		right: -2rem;
 	}
 } // .main-navigation
 
@@ -149,15 +142,33 @@
 }
 
 .footer-navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
 
 	a {
-		color: lighten($color__text-main, 10);
 		color: $color__text-main;
-		font-size: $small-font-size;
+		@include font-size(0.75);
+	}
+
+	.site-logo {
+		border: 1px dotted transparent;
+		display: block;
+		width: 4rem;
+
+		&:focus {
+			border-color: inherit;
+		}
+
+		@media screen and (min-width: 60em) {
+			width: 6rem;
+		}
 	}
 
 	@media screen and (min-width: 37.5em) {
+		flex-direction: row;
+		justify-content: space-between;
 		text-align: right;
 
 		a {

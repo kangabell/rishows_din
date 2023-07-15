@@ -1,5 +1,4 @@
 body,
-button,
 input,
 select,
 optgroup,
@@ -7,11 +6,12 @@ textarea {
 	color: $color__text-main;
 	font-family: $font__main;
 	@include font-size(1);
+	font-variation-settings: "wght" 600;
 	line-height: $font__line-height-body;
 }
 
 %alt-type {
-	font-family: $font__main;
+	font-family: $font__alt;
 	letter-spacing: 0.075em;
 	text-transform: uppercase;
 }
