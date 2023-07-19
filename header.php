@@ -41,19 +41,16 @@
 				<?php
 				if ( is_home() ) :
 					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></h1>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/img/logo-handmade-color_web.png' ); ?>" alt="<?php echo bloginfo('name'); ?>" >
+					</a></h1>
 					<?php
 				else :
 					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></p>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/img/logo-handmade-color_web.png' ); ?>" alt="<?php echo bloginfo('name'); ?>" >
+					</a></p>
 					<?php
-				endif;
-
-				$rishows_din_description = get_bloginfo( 'description', 'display' );
-				if ( $rishows_din_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $rishows_din_description; /* WPCS: xss ok. */ ?></p>
-				<?php
 				endif;
 				?>
 			</div>

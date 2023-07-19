@@ -123,12 +123,33 @@ body {
 .site-title {
 	line-height: 1;
 	margin: 0;
+
 	a {
 		border: 0;
 		display: inline-block;
 		font-family: $font__alt;
 		font-size: $h1-font-size;
 		text-transform: uppercase;
+	}
+
+	.site-header & {
+		width: 16rem;
+
+		@media screen and (min-width: 60em) {
+			width: 20rem;
+		}
+
+		@media screen and (min-width: 88em) {
+			margin-left: -0.5rem;
+		}
+	}
+
+	.site-footer & {
+		width: 12rem;
+
+		@media screen and (min-width: 60em) {
+			width: 14rem;
+		}
 	}
 }
 
