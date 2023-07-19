@@ -93,25 +93,17 @@
 	}
 
 	@media screen and (min-width: 37.5em) {
-		$button-offset: 4rem;
-
 		left: auto;
-		padding: 0.25rem;
-		transform: rotate(90deg) translateX(100%);
-		transform-origin: top right;
 		z-index: 1;
-		top: calc(#{$button-offset} + 2rem);
 		right: 1rem;
 
-		> div {
-			text-align: left;
+		.menu-item:not(.show-submit) {
+			display: none;
 		}
 
 		.show-submit {
-			left: -$button-offset; // actually 'top', because of rotation
-			transform: rotate(-87deg) translateX(-100%);
+			transform: rotate(4deg);
 			transform-origin: top left;
-			position: absolute;
 		}
 	}
 

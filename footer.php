@@ -18,7 +18,7 @@
 
 			<div class="site-branding">
 				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php echo get_template_directory_uri() . '/img/logo-mark_web.svg'; ?>" alt="<?php bloginfo(); ?>" />
+					<img src="<?php echo get_template_directory_uri() . '/img/logo-mark-handmade.png'; ?>" alt="<?php bloginfo(); ?>" />
 				</a>
 				<div class="text">
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
