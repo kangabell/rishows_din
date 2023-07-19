@@ -7,6 +7,11 @@
  * @package RI_Shows_DIN
  */
 
+if ( ! defined( 'RI_SHOWS_DIN_VERSION' ) ) {
+	// Replace the version number of the theme on each release.
+	define( 'RI_SHOWS_DIN_VERSION', '2.1.1' );
+}
+
 if ( ! function_exists( 'rishows_din_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -112,21 +117,21 @@ add_action( 'widgets_init', 'rishows_din_widgets_init' );
  * Enqueue scripts and styles.
  */
 function rishows_din_scripts() {
-	wp_enqueue_style( 'rishows-din-style', get_template_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'rishows-din-style', get_template_directory_uri() . '/css/style.css', array(), RI_SHOWS_DIN_VERSION );
 
-	wp_enqueue_style( 'rishows-din-print-style', get_template_directory_uri() . '/css/print.css', array(), false,'print' );
+	wp_enqueue_style( 'rishows-din-print-style', get_template_directory_uri() . '/css/print.css', array(), RI_SHOWS_DIN_VERSION,'print' );
 
-	wp_enqueue_script( 'rishows-din-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'rishows-din-navigation', get_template_directory_uri() . '/js/navigation.js', array(), RI_SHOWS_DIN_VERSION, true );
 
 	// SuperParticles.js stuff
 	// src: https://github.com/T-vK/SuperParticles
 	if ( is_page() ) {
-		wp_enqueue_script( 'pixi', 'https://pixijs.download/dev-graphics-batch-pool/pixi.js', array(), '20230614', true );
-		wp_enqueue_script( 'superparticles', 'https://cdn.jsdelivr.net/gh/T-vK/SuperParticles@master/SuperParticles.js', array(), '20230614', true );
-		wp_enqueue_script( 'rishows-din-superparticles', get_template_directory_uri() . '/js/plugins/super-particles.js', array(), '20230614', true );
+		wp_enqueue_script( 'pixi', 'https://pixijs.download/dev-graphics-batch-pool/pixi.js', array(), RI_SHOWS_DIN_VERSION, true );
+		wp_enqueue_script( 'superparticles', 'https://cdn.jsdelivr.net/gh/T-vK/SuperParticles@master/SuperParticles.js', array(), RI_SHOWS_DIN_VERSION, true );
+		wp_enqueue_script( 'rishows-din-superparticles', get_template_directory_uri() . '/js/plugins/super-particles.js', array(), RI_SHOWS_DIN_VERSION, true );
 	}
 
-	wp_enqueue_script( 'rishows-din-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'rishows-din-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), RI_SHOWS_DIN_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

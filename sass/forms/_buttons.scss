@@ -9,8 +9,6 @@ input[type="submit"],
 	@extend %alt-type;
 	box-sizing: border-box;
 	cursor: pointer;
-	border: 0;
-	border-radius: 0.25rem;
 	color: $color__text-main;
 	background: $color__background-button;
 	background-clip: padding-box;
@@ -54,5 +52,13 @@ input[type="submit"],
 
 input[type="submit"],
 .usp-submit {
+	background: var(--color-secondary);
 	margin-top: 1.5rem;
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: $color__border-button-hover;
+		color: var(--color-brighter);
+	}
 }

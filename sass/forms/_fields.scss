@@ -14,20 +14,24 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	background: $color__background-input;
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-	border-radius: 3px;
 	max-width: 100%;
-	padding: 3px;
+	padding: 0.25em 0.5em;
 
 	&:focus {
 		border-color: $color__border-button-focus;
 		color: $color__text-input-focus;
+		outline: 0;
 	}
 }
 
 select {
+	background: $color__background-input;
 	border: 1px solid $color__border-input;
+	max-width: 100%;
+	padding: 0.25em 0.5em;
 }
 
 textarea {
@@ -37,9 +41,29 @@ textarea {
 label {
 	@extend %alt-type;
 	font-size: $small-font-size;
+	font-weight: 800;
+	display: block;
 	margin-bottom: 0.25em;
 }
 
 fieldset {
 	margin: 0 0 1rem 0;
+}
+
+.flex-fields {
+	align-items: flex-end;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.field {
+		width: 48%;
+	}
+}
+
+.wpcf7-not-valid-tip {
+	@extend %alt-type;
+	font-size: $small-font-size;
+	font-weight: 800;
+	margin-top: 0.25em;
 }

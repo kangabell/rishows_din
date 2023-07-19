@@ -45,7 +45,7 @@ $event_id = Tribe__Events__Main::postIdHelper( get_the_ID() );
 		</header>
 
 		<?php the_content();?>
-		<?php the_post_thumbnail( 'thumbnail', [ 'alt' => esc_html( 'Flyer for \'', 'rishows-din' ) . esc_html ( get_the_title() ) . '\'' ] ); ?>
+		<?php the_post_thumbnail( 'post-thumbnail', [ 'alt' => esc_html( 'Flyer for \'', 'rishows-din' ) . esc_html ( get_the_title() ) . '\'' ] ); ?>
 		<p>
 			<?php
 			echo '<strong>' . tribe_get_venue() . '</strong><br>';

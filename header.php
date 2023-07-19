@@ -37,24 +37,26 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			if ( is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></h1>
+			<div class="text">
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></p>
-				<?php
-			endif;
+				if ( is_home() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo('name'); ?></a></p>
+					<?php
+				endif;
 
-			$rishows_din_description = get_bloginfo( 'description', 'display' );
-			if ( $rishows_din_description || is_customize_preview() ) :
+				$rishows_din_description = get_bloginfo( 'description', 'display' );
+				if ( $rishows_din_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $rishows_din_description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif;
 				?>
-				<p class="site-description"><?php echo $rishows_din_description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif;
-			?>
+			</div>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

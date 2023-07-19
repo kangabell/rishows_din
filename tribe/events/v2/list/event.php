@@ -28,6 +28,10 @@
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 	</h3>
 
+	<span class="event-meta event-venue">
+		<?php echo tribe_get_venue(); ?>
+	</span>
+
 	<?php if ( tribe_get_start_time() ) : ?>
 		<span class="event-meta event-time">
 			<?php
@@ -43,14 +47,10 @@
 		</span>
 	<?php endif; ?>
 
-	<?php if ( tribe_get_event_meta() ) : ?>
+	<?php if ( tribe_get_event_meta( $event->ID, '_ecp_custom_2' ) ) : ?>
 		<span class="event-meta event-age">
 			<?php echo tribe_get_event_meta( $event->ID, '_ecp_custom_2' ); ?>
 		</span>
 	<?php endif; ?>
-
-	<span class="event-meta event-venue">
-		<?php echo tribe_get_venue(); ?>
-	</span>
 
 </div>

@@ -9,12 +9,17 @@
 .tribe-events .tribe-events-l-container,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
 	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .tribe-common .tribe-common-l-container,
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+#tribe-events-content.tribe-events-list {
+	margin-bottom: 2rem; // override
 }
 
 // removed because it was adding overflow on mobile
@@ -44,14 +49,13 @@ div.type-tribe_events {
 // pseudo element uncovers list on load
 .tribe-events-calendar-list::after {
 	background: var(--color-darker);
-	box-shadow: 1rem -1rem 4rem 1rem var(--color-darker);
 	content: '';
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	animation-delay: 0.125s;
+	animation-delay: 0.15s;
 	animation-duration: 0.95s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 1;
@@ -59,21 +63,21 @@ div.type-tribe_events {
 	animation-timing-function: ease-out;
 
 	@media screen and (min-width: 60em) {
-		animation-duration: .75s;
+		animation-duration: 0.5s;
 	}
 }
 
-.tribe-events-calendar-list__month-separator {
-	font-size: $h3-font-size;
+.tribe-events h2.tribe-events-calendar-list__month-separator {
+	display: none;
 }
 
 // Meta
 .event-meta.event {
+	&-venue,
 	&-title,
 	&-date,
 	&-time,
-	&-cost,
-	&-age {
+	&-cost {
 		margin-right: 0.5em; // override
 	}
 }
@@ -97,10 +101,6 @@ div.type-tribe_events {
 	@media screen and (min-width: 37.5em) {
 		font-size: 1.25rem;
 	}
-}
-
-#tribe-events-content.tribe-events-list {
-	margin-bottom: 2rem; // override
 }
 
 // Subscribe/Export dropdown

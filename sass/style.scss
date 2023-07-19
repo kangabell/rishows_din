@@ -96,7 +96,7 @@ html {
 }
 
 body {
-	background: url('../img/darkpaperfibers.png');
+	background: url('../img/darkpaperfibers.png') $color__background-body;
 	background-size: 250px 150px;
 	padding: 0.5rem 0.5rem 0;
 	@media screen and (min-width: 37.5em) {
@@ -105,26 +105,35 @@ body {
 	}
 }
 
-.site-branding {
+.site {
+	padding-top: 2rem;
+}
 
-	@media screen and (min-width: 88em) {
-		margin-left: -2.5rem;
-		transform: rotate(-1deg);
+.site-branding {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+
+	@media screen and (min-width: 37.5em) {
+		flex-direction: row;
+		text-align: left;
 	}
 }
 
 .site-title {
-	font-size: $h2-font-size;
 	line-height: 1;
 	margin: 0;
 	a {
 		border: 0;
-		font-variation-settings: "wght" 400;
+		display: inline-block;
+		font-family: $font__alt;
+		font-size: $h1-font-size;
 		text-transform: uppercase;
 	}
-	@media screen and (min-width: 37.5em) {
-		font-size: 3.375rem;
-	}
+}
+
+.site-logo img {
+	display: block;
 }
 
 .site-description {
@@ -141,6 +150,10 @@ body {
 	margin-top: 2rem;
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
+
+	.site-branding {
+		align-items: center;
+	}
 
 	@media screen and (min-width: 37.5em) {
 		margin-left: -1rem;

@@ -32,6 +32,7 @@ $color__background-screen: var(--color-neutral);
 $color__background-hr: var(--color-neutral);
 $color__background-button: var(--color-neutral);
 $color__background-button-hover: var(--color-base);
+$color__background-input: var(--color-base);
 $color__background-pre: var(--color-neutral);
 $color__background-ins: var(--color-neutral);
 
@@ -45,6 +46,6 @@ $color__selection: var(--color-secondary);
 
 $color__border-button: linear-gradient(90deg, var(--color-primary) 0%, var(--color-tertiary) 100%);
 $color__border-button-hover: var(--color-primary);
-$color__border-button-focus: var(--color-primary);
+$color__border-button-focus: var(--color-quinary);
 $color__border-input: var(--color-tertiary);
 $color__border-abbr: var(--color-tertiary);

@@ -13,18 +13,15 @@ a {
 	}
 }
 
+.site-content a {
+	position: relative;
+	text-decoration: underline var(--color-neutral) solid;
+	-webkit-text-decoration: underline var(--color-neutral) solid;
+	text-decoration-thickness: 0.075em;
+	transition: all 0.125s;
 
-// fancy gradient underlines
-@media screen and (min-width: 50em) {
-	
-	.site-content a {
-		position: relative;
-		text-decoration: underline var(--color-neutral) solid 0.075em;
-		transition: all 0.125s;
-
-		&:hover,
-		&:focus {
-			text-decoration-color: var(--color-contrast);
-		}
+	&:hover,
+	&:focus {
+		text-decoration-color: var(--color-contrast);
 	}
 }
