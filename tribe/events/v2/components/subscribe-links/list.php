@@ -29,7 +29,7 @@ if ( empty( $items ) ) {
 		<div class="tribe-events-c-subscribe-dropdown__content">
 			<ul class="tribe-events-c-subscribe-dropdown__list" tabindex="0">
 				<li class="tribe-events-c-subscribe-dropdown__list-item"><a class="tribe-events-c-subscribe-dropdown__list-item-link" href="https://rishows.com/shows/feed"><?php esc_html_e( 'RSS Feed', 'rishows-din' ); ?></a></li>
-				<li class="tribe-events-c-subscribe-dropdown__list-item"><a class="tribe-events-c-subscribe-dropdown__list-item-link" href="mailto:admin@rishows.com?subject=sign me up for rishows emails"><?php esc_html_e( 'Weekly Email Digest', 'rishows-din' ); ?></a></li>
+				<li class="tribe-events-c-subscribe-dropdown__list-item"><a class="tribe-events-c-subscribe-dropdown__list-item-link" href="mailto:admin@rishows.com?subject=sign&nbsp;me&nbsp;up&nbsp;for&nbsp;rishows&nbsp;emails"><?php esc_html_e( 'Weekly Email Digest', 'rishows-din' ); ?></a></li>
 				<?php foreach ( $items as $item ) : ?>
 					<?php $this->template( 'components/subscribe-links/item', [ 'item' => $item ] ); ?>
 				<?php endforeach; ?>
