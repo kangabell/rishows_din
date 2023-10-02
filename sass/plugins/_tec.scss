@@ -4,7 +4,7 @@
 	padding-left: 0;
 }
 
-// LIST PAGE
+// LIST VIEW
 
 .tribe-events .tribe-events-l-container,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
@@ -132,5 +132,31 @@ div.type-tribe_events {
 	padding: 0.5rem 1rem;
 	p {
 		margin: 0.25em 0;
+	}
+}
+
+
+// MONTH VIEW
+
+.tribe-events-calendar-month {
+	&__calendar-event-title {
+		font-size: $h4-font-size;
+	}
+	&__calendar-event-datetime {
+		font-size: $small-font-size;
+	}
+	&__calendar-event-datetime-separator,
+	&__calendar-event-datetime-separator + time {
+		display: none; // remove end time
+	}
+}
+
+div.tribe-events-calendar-month__calendar-event-tooltip {
+	padding: 0.5rem;
+	.tribe-event-time {
+		display: none;
+	}
+	&-description {
+		@include font-size(0.875);
 	}
 }
