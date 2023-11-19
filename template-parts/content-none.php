@@ -34,7 +34,7 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'rishows-din' ); ?></p>
+			<p><?php esc_html_e( 'No results found. Please try again!', 'rishows-din' ); ?></p>
 			<?php
 			get_search_form();
 
