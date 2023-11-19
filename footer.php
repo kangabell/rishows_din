@@ -34,13 +34,17 @@
 					?>
 				</div>
 			</div><!-- .site-branding -->
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'footer-menu',
-				'depth'			 => 1
-			) );
-			?>
+			<div>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'footer-menu',
+					'depth'			 => 1,
+					'container'		 => 'nav'
+				) );
+				dynamic_sidebar( 'utility' );
+				?>
+			</div>
 		</nav><!-- #site-navigation -->
 	</footer><!-- #colophon -->
 

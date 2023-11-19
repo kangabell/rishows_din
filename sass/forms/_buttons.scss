@@ -50,6 +50,11 @@ input[type="submit"],
 	}
 }
 
+.wp-element-button:hover,
+.wp-element-button:focus {
+	border-color: $color__border-button-hover;
+}
+
 input[type="submit"],
 .usp-submit {
 	background: var(--color-secondary);

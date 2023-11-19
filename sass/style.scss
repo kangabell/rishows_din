@@ -124,6 +124,7 @@ body {
 
 	@media screen and (min-width: 37.5em) {
 		flex-direction: row;
+		margin-bottom: 0;
 		text-align: left;
 	}
 }
@@ -182,6 +183,11 @@ body {
 
 	.site-branding {
 		align-items: center;
+	}
+
+	.widget_search {
+		margin-top: 1rem;
+		margin-bottom: 0;
 	}
 
 	@media screen and (min-width: 37.5em) {
