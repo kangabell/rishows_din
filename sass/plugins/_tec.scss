@@ -139,7 +139,8 @@ div.type-tribe_events {
 // MONTH VIEW
 
 .tribe-events-calendar-month {
-	&__calendar-event-title {
+	&__calendar-event-title,
+	&__multiday-event-bar-title {
 		font-size: $h4-font-size;
 	}
 	&__calendar-event-datetime {
@@ -158,5 +159,22 @@ div.tribe-events-calendar-month__calendar-event-tooltip {
 	}
 	&-description {
 		@include font-size(0.875);
+	}
+}
+
+// all-day events
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-month__multiday-event-wrapper {
+	height: auto;
+}
+div.tribe-events .tribe-events-calendar-month__multiday-event-bar {
+	background: transparent;
+	overflow: initial;
+	width: auto !important;
+	&-inner {
+		flex-wrap: wrap;
+	}
+	&-title {
+		overflow: inherit;
+		white-space: initial;
 	}
 }
