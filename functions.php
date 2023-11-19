@@ -9,7 +9,7 @@
 
 if ( ! defined( 'RI_SHOWS_DIN_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'RI_SHOWS_DIN_VERSION', '2.1.2' );
+	define( 'RI_SHOWS_DIN_VERSION', '2.2' );
 }
 
 if ( ! function_exists( 'rishows_din_setup' ) ) :
