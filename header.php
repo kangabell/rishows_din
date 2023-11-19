@@ -36,7 +36,6 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'rishows-din' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<?php dynamic_sidebar( 'utility' ); ?>
 		<div class="site-branding">
 			<div class="text">
 				<?php
