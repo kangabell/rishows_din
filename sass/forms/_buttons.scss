@@ -3,7 +3,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button,
-.tribe-common button,
 .menu .show-submit a {
 	$border: 2px;
 	@extend %alt-type;
