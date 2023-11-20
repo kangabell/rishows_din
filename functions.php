@@ -150,32 +150,11 @@ if ( class_exists( 'Tribe__Events__Main' ) && class_exists( 'Tribe__Events__Pro_
 	}
 	add_filter('usp_post_type', 'usp_modify_post_type');
 
-	// Remove Tribe Events Bar
-	add_filter( 'tribe-events-bar-should-show', '__return_false', 9999 );
-
-	// Changes the text for calendar export button
-	remove_action( 'tribe_events_after_footer', array( tribe( 'tec.iCal' ), 'maybe_add_link' ) );
-	add_action( 'tribe_events_after_footer', 'customized_tribe_single_event_links' );
-
-	function customized_tribe_single_event_links()	{
-		if ( is_single() && post_password_required() ) {
-			return;
-		}
-		echo '<a class="tribe-events-ical tribe-events-button button" title="Use this to share calendar data with Google Calendar, Apple iCal and other compatible apps" href="' . tribe_get_ical_link() . '">+ Export</a>';
-	}
-
 	// Increase number of events in the export file (from "export" button)
 	// @link https://theeventscalendar.com/knowledgebase/k/changing-the-number-of-events-in-ical-export/
 	add_filter( 'tribe_ical_feed_posts_per_page', function() {
 		return 1000; // high number hopefully encompasses everything
 	} );
-
-	// open event website link in a new window
-	// @link https://gist.github.com/cliffordp/3584b8aee70cde484700
-	add_filter( 'tribe_get_event_website_link_target', 'rishows_din_blank_target_for_new_window' );
-	function rishows_din_blank_target_for_new_window() {
-		return '_blank';
-	}
 }
 
 /**
