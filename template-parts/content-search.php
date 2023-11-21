@@ -12,21 +12,38 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
+		if ( 'tribe_events' === get_post_type() ) :
+		?>
+			<span class="event-meta event-date">
+				<?php echo tribe_get_start_date(); ?>
+			</span>
+		<?php
+		endif;
+
 		if ( function_exists('relevanssi_query') ) {
 			relevanssi_the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 
 		} else {
 			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		}
+
+		if ( 'post' === get_post_type() ) :
 		?>
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			rishows_din_posted_on();
-			rishows_din_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+			<div class="entry-meta">
+				<?php
+				rishows_din_posted_on();
+				rishows_din_posted_by();
+				?>
+			</div><!-- .entry-meta -->
+		<?php
+		elseif ( 'tribe_events' === get_post_type() ) :
+		?>
+			<span class="event-meta event-venue">
+				<?php echo tribe_get_venue(); ?>
+			</span>
+		<?php
+		endif;
+		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">

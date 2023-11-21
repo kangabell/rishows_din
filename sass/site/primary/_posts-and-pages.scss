@@ -16,16 +16,27 @@
 	margin: 0 0 1.5em;
 }
 
-// Single Event Page
-.tribe-events-single h1 {
-	margin-top: 0;
-}
-
-// Venues Archive Page
-.tribe-venues h2 {
-	margin-bottom: 0;
-}
-
 .page-header {
 	margin-bottom: 2rem;
+}
+
+.search-results {
+
+	.hentry {
+		max-width: 40rem;
+
+		+ .hentry {
+			margin-top: 2rem;
+		}
+	}
+
+	.entry-title {
+		font-size: $h3-font-size;
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+	}
+
+	.entry-summary p {
+		margin-top: 0;
+	}
 }
