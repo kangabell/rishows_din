@@ -225,3 +225,16 @@ div.tribe-events .tribe-events-calendar-month__multiday-event-bar {
 .tribe-venues h2 {
 	margin-bottom: 0;
 }
+
+
+// SINGLE VENUE PAGE
+
+.tribe-events-header__breadcrumbs,
+.tribe-events-header__content-title,
+.tribe-events-pro-venue__meta-address-directions-link {
+	display: none;
+}
+
+body.single-tribe_venue .tribe-events-header .tribe-events-header__title h1.tribe-events-header__title-text {
+	font-size: $h1-font-size; // override
+}
